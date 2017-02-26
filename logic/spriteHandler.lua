@@ -4,6 +4,7 @@ function SpriteHandler.loadSprite(name, scale, delay)
   local Sprite = {}
   
   Sprite.image = love.graphics.newImage("assets/sprites/" .. name)
+  Sprite.image:setFilter("nearest", "nearest")
   
   Sprite.frames = Sprite.image:getWidth() / Sprite.image:getHeight()
   
